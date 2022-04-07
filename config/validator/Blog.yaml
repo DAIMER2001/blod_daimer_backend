@@ -1,0 +1,25 @@
+App\Form\Model\BlogDto:
+    properties:
+        title:
+            - NotBlank: { groups: [blog] }
+            - NotNull: ~
+            - Length: 
+                # groups: [blog]
+                min: 5
+                max: 255
+                minMessage: 'Your title must be at least {{ limit }} characters long'
+                maxMessage: 'Your title cannot be longer than {{ limit }} characters'
+        author:
+            - NotNull: ~
+            - Length:
+                min: 2
+                max: 150
+                minMessage: 'Your author must be at least {{ limit }} characters long'
+                maxMessage: 'Your author cannot be longer than {{ limit }} characters'
+        text:
+            - NotNull: ~
+            - Length:
+                min: 2
+                max: 500
+                minMessage: 'Your name must be at least {{ limit }} characters long'
+                maxMessage: 'Your name cannot be longer than {{ limit }} characters'

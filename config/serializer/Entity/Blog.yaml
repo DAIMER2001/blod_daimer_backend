@@ -1,0 +1,12 @@
+App\Entity\Blog:
+  attributes:
+      id:
+          groups: ['blog']
+      title:
+          groups: ['blog']
+      author:
+          groups: ['blog']
+      image:
+          groups: ['blog']
+      text:
+          groups: ['blog']
